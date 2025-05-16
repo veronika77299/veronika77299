@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Maldivas - Página única</title>
+<style>
+  body { font-family: sans-serif; padding: 10px; }
+  nav a { margin: 10px; cursor: pointer; color: blue; text-decoration: underline; }
+  section { display: none; margin-top: 20px; }
+  section.active { display: block; }
+  img { max-width: 100%; }
+</style>
+</head>
+<body>
+
+<h1>Maldivas</h1>
+
+<nav>
+  <a onclick="showSection('inicio')">Inicio</a>
+  <a onclick="showSection('playas')">Playas</a>
+  <a onclick="showSection('cultura')">Cultura</a>
+  <a onclick="showSection('gastronomia')">Gastronomía</a>
+</nav>
+
+<section id="inicio" class="active">
+  <h2>Bienvenido a Maldivas</h2>
+  <p>Las Maldivas son un paraíso tropical famoso por sus playas y aguas cristalinas.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1e/Aerial_view_of_a_resort_island_in_the_Maldives.jpg" alt="Maldivas" />
+  <p><a href="https://html5up.net/phantom" target="_blank">plantilla</a></p>
+</section>
+
+<section id="playas">
+  <h2>Playas de Maldivas</h2>
+  <p>Las playas de Maldivas son de arena blanca y aguas turquesas.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Beach_at_Veligandu_Island%2C_Maldives.jpg" alt="Playas" />
+  <p><a href="https://bootstrapmade.com/selecao-bootstrap-template/" target="_blank">plantilla</a></p>
+</section>
+
+<section id="cultura">
+  <h2>Cultura de Maldivas</h2>
+  <p>La cultura maldiva tiene influencias africanas, árabes e indias.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Maldives_dance.jpg" alt="Cultura" />
+  <p><a href="https://bootstrapmade.com/selecao-bootstrap-template/" target="_blank">plantilla</a></p>
+</section>
+
+<section id="gastronomia">
+  <h2>Gastronomía de Maldivas</h2>
+  <p>Se come mucho pescado, arroz y coco. Es una cocina muy sabrosa.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Maldivian_cuisine.jpg" alt="Gastronomía" />
+  <p><a href="https://bootstrapmade.com/selecao-bootstrap-template/" target="_blank">plantilla</a></p>
+</section>
+
+<script>
+  function showSection(id) {
+    // Oculta todas las secciones
+    const secciones = document.querySelectorAll('section');
+    secciones.forEach(sec => sec.classList.remove('active'));
+
+    // Muestra la sección seleccionada
+    document.getElementById(id).classList.add('active');
+  }
+</script>
+
+</body>
+</html>
