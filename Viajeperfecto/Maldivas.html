@@ -1,188 +1,96 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Descubre Maldivas</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #0099cc;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 2em;
+      text-align: center;
+    }
+    section img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1em;
+      border-radius: 10px;
+    }
+    footer {
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 1em;
+      font-size: 0.9em;
+    }
+    @media (max-width: 600px) {
+      nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
-<body class="principal">
+<body>
+
   <header>
     <h1>Descubre Maldivas</h1>
     <nav>
-      <a href="playas.html">Playas</a>
-      <a href="cultura.html">Cultura</a>
-      <a href="actividades.html">Actividades</a>
+      <a href="#inicio">Inicio</a>
+      <a href="#playas">Playas</a>
+      <a href="#cultura">Cultura</a>
+      <a href="#actividades">Actividades</a>
     </nav>
   </header>
-  <main>
+
+  <section id="inicio">
     <img src="img/playa.jpg" alt="Vista de Maldivas" />
     <p>Explora las maravillas de las Maldivas: playas, cultura y aventuras inolvidables.</p>
-  </main>
-  <footer>
-    Basado en la <a href="plantilla-principal.html">plantilla</a>
-  </footer>
-</body>
-</html>
+  </section>
 
-<!-- playas.html -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Playas</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="secundaria">
-  <header>
-    <h1>Playas</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="cultura.html">Cultura</a>
-      <a href="actividades.html">Actividades</a>
-    </nav>
-  </header>
-  <main>
+  <section id="playas">
+    <h2>Playas</h2>
     <img src="img/playa.jpg" alt="Playas de Maldivas" />
     <p>Las playas de Maldivas son famosas por su arena blanca y aguas cristalinas.</p>
-  </main>
-  <footer>
-    Basado en la <a href="plantilla-secundaria.html">plantilla</a>
-  </footer>
-</body>
-</html>
+  </section>
 
-<!-- cultura.html -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cultura</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="secundaria">
-  <header>
-    <h1>Cultura</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="playas.html">Playas</a>
-      <a href="actividades.html">Actividades</a>
-    </nav>
-  </header>
-  <main>
+  <section id="cultura">
+    <h2>Cultura</h2>
     <img src="img/cultura.jpg" alt="Cultura Maldiva" />
     <p>La cultura de Maldivas es rica en tradiciones, música y festividades únicas.</p>
-  </main>
-  <footer>
-    Basado en la <a href="plantilla-secundaria.html">plantilla</a>
-  </footer>
-</body>
-</html>
+  </section>
 
-<!-- actividades.html -->
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Actividades</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body class="secundaria">
-  <header>
-    <h1>Actividades</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="playas.html">Playas</a>
-      <a href="cultura.html">Cultura</a>
-    </nav>
-  </header>
-  <main>
+  <section id="actividades">
+    <h2>Actividades</h2>
     <img src="img/actividades.jpg" alt="Actividades en Maldivas" />
     <p>Disfruta de buceo, snorkel, surf y cenas frente al mar en las Maldivas.</p>
-  </main>
+  </section>
+
   <footer>
-    Basado en la <a href="plantilla-secundaria.html">plantilla</a>
+    Basado en una plantilla. Navegación sin botón atrás.
   </footer>
+
 </body>
 </html>
-
-<!-- plantilla-principal.html -->
-<!DOCTYPE html>
-<html lang="es">
-<head><meta charset="UTF-8"><title>Plantilla Principal</title></head>
-<body>
-  <header>
-    <h1>Título principal</h1>
-    <nav><a href="#">Enlace 1</a><a href="#">Enlace 2</a></nav>
-  </header>
-  <main>
-    <p>Contenido de la plantilla principal</p>
-  </main>
-  <footer>
-    <p>Pie de página</p>
-  </footer>
-</body>
-</html>
-
-<!-- plantilla-secundaria.html -->
-<!DOCTYPE html>
-<html lang="es">
-<head><meta charset="UTF-8"><title>Plantilla Secundaria</title></head>
-<body>
-  <header>
-    <h1>Subtítulo</h1>
-    <nav><a href="#">Inicio</a><a href="#">Otras</a></nav>
-  </header>
-  <main>
-    <p>Contenido de la plantilla secundaria</p>
-  </main>
-  <footer>
-    <p>Pie de página</p>
-  </footer>
-</body>
-</html>
-
-<!-- style.css -->
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-header {
-  background-color: #0099cc;
-  color: white;
-  padding: 1em;
-  text-align: center;
-}
-nav a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
-}
-main {
-  padding: 1em;
-}
-main img {
-  max-width: 100%;
-  height: auto;
-  margin-bottom: 1em;
-}
-footer {
-  background-color: #f2f2f2;
-  padding: 1em;
-  text-align: center;
-  font-size: 0.9em;
-}
-@media (max-width: 600px) {
-  nav {
-    display: block;
-  }
-  nav a {
-    display: block;
-    margin: 10px 0;
-  }
-}
