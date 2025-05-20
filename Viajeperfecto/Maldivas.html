@@ -2,95 +2,143 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Descubre Maldivas</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Maldivas - Página Única</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     body {
       font-family: Arial, sans-serif;
-      line-height: 1.6;
+      margin: 0;
+      background: #e0f7fa;
+      color: #004d40;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 10px;
     }
     header {
-      background-color: #0099cc;
+      background-color: #00796b;
+      padding: 20px 0;
       color: white;
-      padding: 1em;
+      font-size: 2.5em;
+      font-weight: bold;
       text-align: center;
+      margin-bottom: 20px;
+      border-radius: 8px;
     }
     nav {
-      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      gap: 15px;
+      flex-wrap: wrap;
     }
-    nav a {
+    nav button {
+      background-color: #004d40;
       color: white;
-      margin: 0 10px;
-      text-decoration: none;
+      border: none;
+      padding: 12px 25px;
+      font-size: 1em;
+      cursor: pointer;
+      border-radius: 8px;
       font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+    nav button:hover, nav button.active {
+      background-color: #00796b;
     }
     section {
-      padding: 2em;
-      text-align: center;
+      display: none;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
-    section img {
+    section.active {
+      display: block;
+    }
+    img {
       max-width: 100%;
       height: auto;
-      margin-bottom: 1em;
       border-radius: 10px;
+      margin: 20px 0;
     }
-    footer {
-      background-color: #f2f2f2;
-      text-align: center;
-      padding: 1em;
-      font-size: 0.9em;
+    /* Diferentes colores para cada sección */
+    #principal {
+      background: #e0f7fa;
+      color: #004d40;
     }
-    @media (max-width: 600px) {
-      nav a {
-        display: block;
-        margin: 10px 0;
-      }
+    #cultura {
+      background: #fff3e0;
+      color: #5d4037;
+    }
+    #turismo {
+      background: #e3f2fd;
+      color: #0d47a1;
+    }
+    #gastronomia {
+      background: #f3e5f5;
+      color: #6a1b9a;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h1>Descubre Maldivas</h1>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#playas">Playas</a>
-      <a href="#cultura">Cultura</a>
-      <a href="#actividades">Actividades</a>
-    </nav>
-  </header>
+<header>Maldivas</header>
 
-  <section id="inicio">
-    <img src="img/playa.jpg" alt="Vista de Maldivas" />
-    <p>Explora las maravillas de las Maldivas: playas, cultura y aventuras inolvidables.</p>
-  </section>
+<nav>
+  <button class="tab-button active" data-target="principal">Principal</button>
+  <button class="tab-button" data-target="cultura">Cultura</button>
+  <button class="tab-button" data-target="turismo">Turismo</button>
+  <button class="tab-button" data-target="gastronomia">Gastronomía</button>
+</nav>
 
-  <section id="playas">
-    <h2>Playas</h2>
-    <img src="img/playa.jpg" alt="Playas de Maldivas" />
-    <p>Las playas de Maldivas son famosas por su arena blanca y aguas cristalinas.</p>
-  </section>
+<section id="principal" class="active">
+  <p>Las Maldivas son un paraíso tropical en el océano Índico, conocidas por sus aguas cristalinas, playas de arena blanca y exuberante vida marina. Es un destino ideal para vacaciones de ensueño.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Maldives_Beach_2016.jpg" alt="Playa de Maldivas" />
+</section>
 
-  <section id="cultura">
-    <h2>Cultura</h2>
-    <img src="img/cultura.jpg" alt="Cultura Maldiva" />
-    <p>La cultura de Maldivas es rica en tradiciones, música y festividades únicas.</p>
-  </section>
+<section id="cultura">
+  <h2>Cultura de Maldivas</h2>
+  <p>La cultura maldiva está influenciada por tradiciones islámicas, música folclórica y artesanía local. Las festividades tradicionales y la danza bodu beru son elementos importantes del patrimonio cultural.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Maldivian_cultural_dance.JPG" alt="Danza tradicional Maldiva" />
+</section>
 
-  <section id="actividades">
-    <h2>Actividades</h2>
-    <img src="img/actividades.jpg" alt="Actividades en Maldivas" />
-    <p>Disfruta de buceo, snorkel, surf y cenas frente al mar en las Maldivas.</p>
-  </section>
+<section id="turismo">
+  <h2>Turismo en Maldivas</h2>
+  <p>Maldivas es un destino turístico de lujo famoso por sus resorts sobre el agua, buceo, snorkel y playas paradisíacas. Los visitantes disfrutan de la tranquilidad y la belleza natural del archipiélago.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/5/5d/Maldives_Resort_over_water.jpg" alt="Resort sobre el agua en Maldivas" />
+</section>
 
-  <footer>
-    Basado en una plantilla. Navegación sin botón atrás.
-  </footer>
+<section id="gastronomia">
+  <h2>Gastronomía Maldiva</h2>
+  <p>La gastronomía maldiva se basa en pescados frescos, coco y arroz. Platos típicos incluyen el mas huni (mezcla de atún, coco y cebolla) y currys con sabores exóticos.</p>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/1/1f/Maldivian_food.JPG" alt="Comida típica de Maldivas" />
+</section>
+
+<script>
+  const buttons = document.querySelectorAll('.tab-button');
+  const sections = document.querySelectorAll('section');
+
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      // Quitar active a todos botones y secciones
+      buttons.forEach(btn => btn.classList.remove('active'));
+      sections.forEach(sec => sec.classList.remove('active'));
+
+      // Añadir active al botón clicado y a la sección correspondiente
+      button.classList.add('active');
+      const target = button.getAttribute('data-target');
+      document.getElementById(target).classList.add('active');
+    });
+  });
+</script>
 
 </body>
 </html>
+
+  
+  
+     
+ 
+ 
+   
