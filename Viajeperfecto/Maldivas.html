@@ -1,148 +1,37 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Maldivas - Página Única</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #e0f7fa;
-      color: #004d40;
-      max-width: 900px;
-      margin-left: auto;
-      margin-right: auto;
-      padding: 10px;
-    }
-    header {
-      background-color: #00796b;
-      padding: 20px 0;
-      color: white;
-      font-size: 2.5em;
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: 20px;
-      border-radius: 8px;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    nav button {
-      background-color: #004d40;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      font-size: 1em;
-      cursor: pointer;
-      border-radius: 8px;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-    }
-    nav button:hover, nav button.active {
-      background-color: #00796b;
-    }
-    section {
-      display: none;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
-    }
-    section.active {
-      display: block;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin: 20px 0;
-    }
-    /* Diferentes colores para cada sección */
-    #principal {
-      background: #e0f7fa;
-      color: #004d40;
-      
-      
-    }
-    #cultura {
-      background: #fff3e0;
-      color: #5d4037;
-      
-    }
-    #turismo {
-      background: #e3f2fd;
-      color: #0d47a1;
-    }
-    #gastronomia {
-      background: #f3e5f5;
-      color: #6a1b9a;
-    
-    }
-  </style>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+  background-image: url('/w3images/forestbridge.jpg');
+  min-height: 100%;
+  background-position: center;
+  background-size: cover;
+}
+</style>
 </head>
 <body>
 
-<header>Maldivas</header>
-
-<nav>
-  <button class="tab-button active" data-target="principal">Principal</button>
-  <button class="tab-button" data-target="cultura">Cultura</button>
-  <button class="tab-button" data-target="turismo">Turismo</button>
-  <button class="tab-button" data-target="gastronomia">Gastronomía</button>
-</nav>
-
-<section id="principal" class="active">
-  <p>Las Maldivas son un paraíso tropical en el océano Índico, conocidas por sus aguas cristalinas, playas de arena blanca y exuberante vida marina. Es un destino ideal para vacaciones de ensueño.</p>
-  <img src="https://veronika77299.github.io/veronika77299/Viajeperfecto/maldivasprincipal" />
-</section>
-
-<section id="cultura">
-  <h2>Cultura de Maldivas</h2>
-  <p>La cultura maldiva está influenciada por tradiciones islámicas, música folclórica y artesanía local. Las festividades tradicionales y la danza bodu beru son elementos importantes del patrimonio cultural.</p>
-  <img src="https://veronika77299.github.io/veronika77299/Viajeperfecto/culturamaldivas" alt="Danza tradicional Maldiva" />
-</section>
-
-<section id="turismo">
-  <h2>Turismo en Maldivas</h2>
-  <p>Maldivas es un destino turístico de lujo famoso por sus resorts sobre el agua, buceo, snorkel y playas paradisíacas. Los visitantes disfrutan de la tranquilidad y la belleza natural del archipiélago.</p>
-  <img src=" https://veronika77299.github.io/veronika77299/Viajeperfecto/turismomaldivas" alt="Resort sobre el agua en Maldivas" />
-</section>
-
-<section id="gastronomia">
-  <h2>Gastronomía Maldiva</h2>
-  <p>La gastronomía maldiva se basa en pescados frescos, coco y arroz. Platos típicos incluyen el mas huni (mezcla de atún, coco y cebolla) y currys con sabores exóticos.</p>
-  <img src="https://veronika77299.github.io/veronika77299/Viajeperfecto/maldivasgastronomia" alt="Comida típica de Maldivas" />
-</section>
-
-<script>
-  const buttons = document.querySelectorAll('.tab-button');
-  const sections = document.querySelectorAll('section');
-
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      // Quitar active a todos botones y secciones
-      buttons.forEach(btn => btn.classList.remove('active'));
-      sections.forEach(sec => sec.classList.remove('active'));
-
-      // Añadir active al botón clicado y a la sección correspondiente
-      button.classList.add('active');
-      const target = button.getAttribute('data-target');
-      document.getElementById(target).classList.add('active');
-    });
-  });
-</script>
+<div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+  <div class="w3-display-topleft w3-padding-large w3-xlarge">
+    Empresa:VB
+  </div>
+  <div class="w3-display-middle">
+    <h1 class="w3-jumbo w3-animate-top">Maldivas</h1>
+    <hr class="w3-border-grey" style="margin:auto;width:40%">
+    <p class="w3-large w3-center">El viaje perfecto</p>
+  </div>
+  <div class="w3-display-bottomleft w3-padding-large">
+   Gastronomía <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>
+  </div>
+</div>
 
 </body>
 </html>
-
-  
-  
-     
- 
- 
-   
